@@ -1,6 +1,6 @@
-import org.scalatest.{FunSuite, Matchers}
 import Wordful._
 import WordfulSolver.{StringGrid, StringVertex}
+import org.scalatest.{FunSuite, Matchers}
 
 class WordfulSolverTest extends FunSuite with Matchers {
 
@@ -226,21 +226,21 @@ class WordfulSolverTest extends FunSuite with Matchers {
     solver.contains("sting") shouldEqual true // Valid path
   }
 
-      ignore("string string example with placeholders") {
-      val grid = new StringGrid("""
+  test("string string example with placeholders") {
+    val grid = new StringGrid("""
         |..im
         |..is
         |.nat
         |egjf
       """.stripMargin)
-      val solver = new WordfulSolver(grid, grid.edges)
+    val solver = new WordfulSolver(grid, grid.edges)
 
-      solver.contains("mess") shouldEqual false // No path
-      solver.contains("jasmine") shouldEqual true // Valid path
-      }
+    solver.contains("mess") shouldEqual false // No path
+    solver.contains("jasmine") shouldEqual true // Valid path
+  }
 
 
-      def node(value: Value) = Node(1, value)
+  def node(value: Value) = Node(1, value)
   def path(nodes: Node*): List[Node] = List(nodes: _*)
   def edges(nodes: Node*): List[Node] = List(nodes: _*)
   def edge(node: Node): List[Node] = List(node)
