@@ -73,7 +73,7 @@ object Wordful {
 
 }
 
-object WordfulSolver extends App {
+object WordfulSolver {
 
   /** Grid is represented by a single-line string, e.g. xxxyyyzzz (3x3, left to right) */
   class StringGrid(grid: String) extends Grid {
@@ -105,7 +105,7 @@ object WordfulSolver extends App {
 
   case class StringVertex(index: Int, value: Value) extends Vertex
 
-  override def main(args: Array[String]): Unit = {
+  def main(args: Array[String]): Unit = {
     if (args.isEmpty) {
       System.err.println("Usage: cat words | scala WordfulSolver <grid>")
       System.exit(1)
