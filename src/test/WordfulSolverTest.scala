@@ -1,8 +1,6 @@
-package org.softpres.wordful
-
 import org.scalatest.{FunSuite, Matchers}
-import org.softpres.wordful.Wordful._
-import org.softpres.wordful.WordfulSolver.{StringGrid, StringVertex}
+import Wordful._
+import WordfulSolver.{StringGrid, StringVertex}
 
 class WordfulSolverTest extends FunSuite with Matchers {
 

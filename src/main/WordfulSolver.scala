@@ -1,6 +1,4 @@
-package org.softpres.wordful
-
-import org.softpres.wordful.Wordful._
+import Wordful._
 
 import scala.annotation.tailrec
 import scala.io.Source
